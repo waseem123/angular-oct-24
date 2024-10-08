@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class StudentModule {
+  id!: Number;
   name!: String;
   degree!: String;
   branch!: String;
@@ -17,6 +18,7 @@ export class StudentModule {
   image!: String;
 
   constructor() {
+    id: "";
     name: "";
     degree: "";
     branch: "";

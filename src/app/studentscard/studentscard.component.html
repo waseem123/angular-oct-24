@@ -1,9 +1,16 @@
-<div class="card mb-3 shadow-lg">
-    <img class="img-fluid card-img" src="{{student1['image']}}" alt="">
-    <div class="card-body">
-        <h5>{{student1['name']}}</h5>
-        <div>{{student1['degree']}}</div>
-        <div>{{student1['branch']}}</div>
-        <small>Passout - {{student1['passout']}}</small>
-    </div>
+<div class="row">
+    <div *ngFor="let s of students" class="card-group col-md-3 col-sm-6">
+        <!-- <div class="card-group"> -->
+            <div class="card mb-3 shadow-lg">
+                <img class="img-fluid card-img" src="{{s['image']}}" alt="">
+                <div class="card-body">
+                    <h5>{{s['name']}}</h5>
+                    <div>{{s['degree']}}</div>
+                    <div>{{s['branch']}}</div>
+                    <small>Passout - {{s['passout']}}</small>
+                </div>
+                <a href="{{s['id']}}" class="btn btn-primary">View More</a>
+            </div>
+        </div>
+    <!-- </div> -->
 </div>
